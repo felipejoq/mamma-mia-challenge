@@ -63,3 +63,11 @@
 .img-thumbnail {
   max-width: 100px;
 }
+
+.fs-14 {
+  font-size: 14px;
+}
+
+.text-lowercase {
+  text-transform: lowercase;
+}

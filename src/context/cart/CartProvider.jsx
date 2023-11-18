@@ -1,32 +1,35 @@
 import {CartContext} from "./CartContex.js";
-import {useState} from "react";
+import {useEffect, useReducer} from "react";
+import {cartReducer} from "../../reducers/cartReducer.js";
+
+const initialState = [];
+
+const init = () => {
+  return JSON.parse(localStorage.getItem("cart")) || [];
+}
 
 export const CartProvider = ({children}) => {
 
-  const [cart, setCart] = useState([]);
+  const [cart, dispatch] = useReducer(cartReducer, initialState, init)
+
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart]);
 
   const addPizzaToCart = (pizza) => {
-    const pizzaExist = cart.find(item => item.id === pizza.id);
-    if(pizzaExist){
-      setCart(cart.map(item => {
-        if (item.id === pizza.id){
-          return {
-            ...item,
-            quantity: pizza.quantity + pizzaExist.quantity
-          }
-        }
-        return item;
-      }))
-    } else {
-      setCart([
-        ...cart,
-        pizza
-      ])
+    const action = {
+      type: "[ITEM] add to cart",
+      payload: pizza
     }
+    dispatch(action);
   }
 
   const removePizzaFromCart = (id) => {
-    setCart(cart.filter(item => item.id !== id))
+    const action = {
+      type: "[ITEM] remove from cart",
+      payload: id
+    }
+    dispatch(action)
   }
 
   const totalCart = () => {

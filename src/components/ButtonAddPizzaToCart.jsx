@@ -1,9 +1,9 @@
-import {Button, ButtonGroup} from "react-bootstrap";
 import {useContext, useEffect} from "react";
 import {CartContext} from "../context/cart/CartContex.js";
 import useCounter from "../hooks/useCounter.js";
 import {MoreThanOneButton} from "./MoreThanOneButton.jsx";
 import {SimpleAddButton} from "./SimpleAddButton.jsx";
+import {toast} from "sonner";
 
 export const ButtonAddPizzaToCart = ({pizza}) => {
 
@@ -18,6 +18,7 @@ export const ButtonAddPizzaToCart = ({pizza}) => {
       ...pizza,
       quantity: counter
     });
+    toast.success(`Pizza ${pizza.name} añadida al carrito!`)
   }
 
   const subPizza = () => {
@@ -25,10 +26,12 @@ export const ButtonAddPizzaToCart = ({pizza}) => {
       ...pizza,
       quantity: -counter
     });
+    toast.info(`Pizza ${pizza.name} descontada del carrito!`)
   }
 
   const removePizza = () => {
-    removePizzaFromCart(pizza.id)
+    removePizzaFromCart(pizza.id);
+    toast.error(`Pizza ${pizza.name} eliminada del carrito!`)
   }
 
   return (

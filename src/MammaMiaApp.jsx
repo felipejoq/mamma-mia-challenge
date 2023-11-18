@@ -7,6 +7,7 @@ import {Footer} from "./components/Footer.jsx";
 import {GlobalProvider} from "./context/global/GlobalProvider.jsx";
 import {CartProvider} from "./context/cart/CartProvider.jsx";
 import {Cart} from "./views/Cart.jsx";
+import {Toaster} from "sonner";
 
 const MammaMiaApp = () => {
 
@@ -22,6 +23,7 @@ const MammaMiaApp = () => {
             <Route path="/page-not-found" element={<PageNotFound/>}/>
             <Route path="*" element={<PageNotFound/>}/>
           </Routes>
+          <Toaster richColors position="top-center" />
         </CartProvider>
         <Footer/>
       </GlobalProvider>

@@ -4,9 +4,9 @@ export const IngredientsList = ({ingredients}) => {
       <h3 className="fs-5">Ingredientes:</h3>
       {
         ingredients.map(ingredient => (
-          <div className="ps-4 text-capitalize" key={ingredient}>
+          <p className="ps-4 text-capitalize my-0" key={ingredient}>
             🍕 {ingredient}
-          </div>
+          </p>
         ))
       }
     </>
