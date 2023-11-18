@@ -1,16 +1,10 @@
-import {Button, Card, Col, Row} from "react-bootstrap";
+import {Card, Col, Row} from "react-bootstrap";
 import {IngredientsList} from "./IngredientsList.jsx";
 import {Price} from "./Price.jsx";
 import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
-import {useNavigate} from "react-router-dom";
+import {PrevButton} from "./PrevButton.jsx";
 
 export const PizzaDetails = ({pizza}) => {
-
-  const navigate = useNavigate();
-
-  const toPrev = () => {
-    navigate("/")
-  }
 
   return (
     <>
@@ -36,20 +30,18 @@ export const PizzaDetails = ({pizza}) => {
                 && <IngredientsList ingredients={pizza.ingredients}/>
               }
               <hr/>
-              <div className="d-flex justify-content-between align-items-stretch">
-                <Price price={pizza.price} size="lg"/>
-                <ButtonAddPizzaToCart pizza={pizza}/>
-              </div>
+              <Row className="d-flex justify-content-between align-items-stretch">
+                <Col>
+                  <Price price={pizza.price} size="lg"/>
+                </Col>
+                <Col className="d-flex justify-content-between align-items-stretch">
+                  <ButtonAddPizzaToCart pizza={pizza}/>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Col>
-        <Button
-          className="w-75 my-4"
-          variant="outline-secondary"
-          onClick={toPrev}
-        >
-          <i className="bi bi-arrow-left-square-fill"></i> Volver Atrás
-        </Button>
+        <PrevButton />
       </Row>
     </>
   );

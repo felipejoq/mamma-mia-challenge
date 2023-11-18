@@ -5,7 +5,8 @@ export const SimpleAddButton = ({addPizza, currentPizza}) => {
     <Button
       onClick={addPizza}
       variant="success"
-      className="fs-5"
+      size="lg"
+      className=""
     >
       <i
         className="bi bi-basket"></i> Añadir {currentPizza && currentPizza?.quantity > 0 ? `(${currentPizza?.quantity})` : ""}
