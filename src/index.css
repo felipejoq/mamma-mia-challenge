@@ -59,3 +59,7 @@
 .width-fixed-140 {
   width: 140px;
 }
+
+.img-thumbnail {
+  max-width: 100px;
+}
