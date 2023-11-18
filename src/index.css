@@ -3,3 +3,48 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.bg-pizza-color {
+  background-color: #5F8D37;
+}
+
+.shadow-simple {
+  box-shadow: 0px 12px 6px -6px rgba(0,0,0,0.2);
+}
+
+.container-header {
+  min-height: 200px;
+}
+
+.bg-header-cover{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.card-pizza{
+  width: 300px;
+  min-width: 260px;
+  margin-bottom: 20px;
+}
+
+.img-pizza-info {
+  min-width: 300px;
+  max-width: 100%;
+  padding: 10px;
+}
+
+.margin-top-navbar {
+  margin-top: 100px;
+}
+
+.img-pizza-info img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.cursor-pointer-none {
+  cursor: default;
+}
