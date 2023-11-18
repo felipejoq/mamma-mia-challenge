@@ -26,7 +26,7 @@ export const PIZZAS = [
   {
     "desc": "La pizza es una preparación culinaria que consiste en un pan plano, habitualmente de forma circular, elaborado con harina de trigo, levadura, agua y sal (a veces aceite de oliva) que comúnmente se cubre con salsa de tomate, queso y otros muchos ingredientes, y que se hornea a alta temperatura, tradicionalmente en un horno de leña.",
     "id": "P004",
-    "img": "https://firebasestorage.googleapis.com/v0/b/apis-varias-mias.appspot.com/o/pizzeria%2Fpizza-2000595_640_c.jpg?alt=media&token=61325b6e-a1e0-441e-b3b5-7335ba13e8be",
+    "img": "https://firebasestorage.googleapis.com/v0/b/adivinanzasanimales-18e89.appspot.com/o/pizza-386717_640.jpg?alt=media&token=8fad5613-aa2e-467a-917a-e92fec13614f",
     "ingredients": ["mozzarella", "salame", "aceitunas", "champiñones"],
     "name": "cuatro estaciones",
     "price": 9590
