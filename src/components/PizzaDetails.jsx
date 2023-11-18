@@ -36,10 +36,14 @@ export const PizzaDetails = ({pizza}) => {
                 && <IngredientsList ingredients={pizza.ingredients}/>
               }
               <hr/>
-              <div className="d-flex justify-content-between align-items-stretch">
-                <Price price={pizza.price} size="lg"/>
-                <ButtonAddPizzaToCart pizza={pizza}/>
-              </div>
+              <Row className="d-flex justify-content-between align-items-stretch">
+                <Col>
+                  <Price price={pizza.price} size="lg"/>
+                </Col>
+                <Col className="d-flex justify-content-between align-items-stretch">
+                  <ButtonAddPizzaToCart pizza={pizza}/>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Col>
