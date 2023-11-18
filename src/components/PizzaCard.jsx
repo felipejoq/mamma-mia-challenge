@@ -21,9 +21,10 @@ export const PizzaCard = ({pizza}) => {
         variant="top" src={pizza.img}/>
       <Card.Body>
         <Card.Title>
-          <Link className="text-decoration-none text-dark" to="/">
-            <h2 className="text-capitalize">{pizza.name}</h2>
-          </Link>
+          <h2
+            onClick={() => handleNavigateToPizzaPage(pizza.name)}
+            className="text-capitalize cursor-pointer">{pizza.name}
+          </h2>
           <Price price={pizza.price}/>
         </Card.Title>
         <hr/>
