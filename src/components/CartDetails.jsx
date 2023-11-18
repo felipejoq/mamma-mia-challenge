@@ -4,6 +4,7 @@ import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
 import {useContext} from "react";
 import {CartContext} from "../context/cart/CartContex.js";
 import {toast} from "sonner";
+import {Link} from "react-router-dom";
 
 export const CartDetails = () => {
 
@@ -34,7 +35,9 @@ export const CartDetails = () => {
                 <Col>
                   <Row className="d-flex justify-content-between gap-4">
                     <Col className="d-flex gap-3">
-                      <Image className="img-thumbnail" src={item.img}/>
+                      <Link to={`/pizzas/${item.name}`}>
+                        <Image className="img-thumbnail" src={item.img}/>
+                      </Link>
                       <div className="text-capitalize">
                         <div className="item-name fs-4">
                           <p className="mb-1">
