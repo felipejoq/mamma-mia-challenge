@@ -1,19 +1,19 @@
 import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import {getPizzaByName} from "../services/pizza.js";
+import {getPizzaByName, getPizzaBySlug} from "../services/pizza.js";
 import {Container} from "react-bootstrap";
 import {PizzaDetails} from "../components/PizzaDetails.jsx";
 
 export const Pizza = () => {
 
-  const {pizzaName} = useParams();
+  const {slugPizza} = useParams();
   const [pizza, setPizza] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true)
-    getPizzaByName(pizzaName)
+    getPizzaBySlug(slugPizza)
       .then(pizza => {
         if (!pizza) {
           navigate('/page-not-found')
@@ -25,7 +25,7 @@ export const Pizza = () => {
         setIsLoading(false)
         console.log('Error al obtener la pizza');
       })
-  }, [pizzaName]);
+  }, [slugPizza]);
 
   return (
     <Container className="margin-top-navbar">
