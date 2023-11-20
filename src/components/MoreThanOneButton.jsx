@@ -9,12 +9,16 @@ export const MoreThanOneButton = ({addPizza, currentPizza, subPizza, removePizza
             onClick={subPizza}
             variant="danger"
             className="d-flex justify-content-center align-items-center width-fixed-20"
-          >-1</Button>
+          >
+            <i className="bi bi-dash-square-fill"></i>
+          </Button>
           : <Button
             onClick={removePizza}
             variant="danger"
             className="d-flex justify-content-center align-items-center width-fixed-20"
-          ><i className="bi bi-trash3"></i></Button>
+          >
+            <i className="bi bi-trash-fill"></i>
+          </Button>
       }
       <div
         className="btn btn-outline-secondary d-flex justify-content-center align-items-center disabled text-dark width-fixed-40">
@@ -25,7 +29,7 @@ export const MoreThanOneButton = ({addPizza, currentPizza, subPizza, removePizza
         variant="success"
         className="d-flex justify-content-center align-items-center width-fixed-20"
       >
-        +1
+        <i className="bi bi-plus-square-fill"></i>
       </Button>
     </ButtonGroup>
   );
