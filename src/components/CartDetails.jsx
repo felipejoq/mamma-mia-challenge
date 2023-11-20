@@ -35,7 +35,7 @@ export const CartDetails = () => {
                 <Col>
                   <Row className="d-flex justify-content-between gap-4">
                     <Col className="d-flex gap-3">
-                      <Link to={`/pizzas/${item.name}`}>
+                      <Link to={`/pizzas/${item.slug}`}>
                         <Image className="img-thumbnail" src={item.img}/>
                       </Link>
                       <div className="text-capitalize">

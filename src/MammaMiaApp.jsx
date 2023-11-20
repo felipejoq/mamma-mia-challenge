@@ -18,7 +18,7 @@ const MammaMiaApp = () => {
           <Header/>
           <Routes>
             <Route path="/" element={<Home/>}/>
-            <Route path="/pizzas/:pizzaName" element={<Pizza/>}/>
+            <Route path="/pizzas/:slugPizza" element={<Pizza/>}/>
             <Route path="/cart" element={<Cart/>}/>
             <Route path="/page-not-found" element={<PageNotFound/>}/>
             <Route path="*" element={<PageNotFound/>}/>
