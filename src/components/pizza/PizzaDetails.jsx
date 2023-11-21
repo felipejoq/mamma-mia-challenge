@@ -1,9 +1,9 @@
 import {Card, Col, Row} from "react-bootstrap";
-import {IngredientsList} from "./ingredients/IngredientsList.jsx";
+import {IngredientsList} from "../ingredients/IngredientsList.jsx";
 import {Price} from "./Price.jsx";
-import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
-import {PrevButton} from "./PrevButton.jsx";
-import {Ingredients} from "./ingredients/Ingredients.jsx";
+import {ButtonAddPizzaToCart} from "../buttons/ButtonAddPizzaToCart.jsx";
+import {PrevButton} from "../buttons/PrevButton.jsx";
+import {Ingredients} from "../ingredients/Ingredients.jsx";
 
 export const PizzaDetails = ({pizza}) => {
 

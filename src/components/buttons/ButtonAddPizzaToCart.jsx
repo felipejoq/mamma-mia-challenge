@@ -1,10 +1,10 @@
 import {useContext, useEffect} from "react";
-import {CartContext} from "../context/cart/CartContex.js";
-import useCounter from "../hooks/useCounter.js";
+import {CartContext} from "../../context/cart/CartContex.js";
+import useCounter from "../../hooks/useCounter.js";
 import {MoreThanOneButton} from "./MoreThanOneButton.jsx";
 import {SimpleAddButton} from "./SimpleAddButton.jsx";
 import {toast} from "sonner";
-import {useButtonsCart} from "../hooks/useButtonsCart.js";
+import {useButtonsCart} from "../../hooks/useButtonsCart.js";
 
 export const ButtonAddPizzaToCart = ({pizza}) => {
 

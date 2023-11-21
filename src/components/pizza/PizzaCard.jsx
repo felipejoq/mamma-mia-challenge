@@ -1,9 +1,9 @@
 import {Button, ButtonGroup, Card} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
 import {Price} from "./Price.jsx";
-import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
-import {IngredientsList} from "./ingredients/IngredientsList.jsx";
-import {Ingredients} from "./ingredients/Ingredients.jsx";
+import {ButtonAddPizzaToCart} from "../buttons/ButtonAddPizzaToCart.jsx";
+import {IngredientsList} from "../ingredients/IngredientsList.jsx";
+import {Ingredients} from "../ingredients/Ingredients.jsx";
 
 export const PizzaCard = ({pizza}) => {
 

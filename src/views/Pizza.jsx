@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import {getPizzaByName, getPizzaBySlug} from "../services/pizza.js";
 import {Container} from "react-bootstrap";
-import {PizzaDetails} from "../components/PizzaDetails.jsx";
+import {PizzaDetails} from "../components/pizza/PizzaDetails.jsx";
 
 export const Pizza = () => {
 

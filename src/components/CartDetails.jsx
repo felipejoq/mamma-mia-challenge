@@ -1,6 +1,6 @@
 import {Badge, Button, Card, Col, Image, ListGroup, Row} from "react-bootstrap";
 import {clpFormat} from "../helpers/currencyFormatters.js";
-import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
+import {ButtonAddPizzaToCart} from "./buttons/ButtonAddPizzaToCart.jsx";
 import {useContext} from "react";
 import {CartContext} from "../context/cart/CartContex.js";
 import {toast} from "sonner";
