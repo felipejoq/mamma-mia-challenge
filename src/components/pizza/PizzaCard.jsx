@@ -1,8 +1,9 @@
 import {Button, ButtonGroup, Card} from "react-bootstrap";
 import {useNavigate} from "react-router-dom";
-import {IngredientsList} from "./IngredientsList.jsx";
 import {Price} from "./Price.jsx";
-import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
+import {ButtonAddPizzaToCart} from "../buttons/ButtonAddPizzaToCart.jsx";
+import {IngredientsList} from "../ingredients/IngredientsList.jsx";
+import {Ingredients} from "../ingredients/Ingredients.jsx";
 
 export const PizzaCard = ({pizza}) => {
 
@@ -27,7 +28,9 @@ export const PizzaCard = ({pizza}) => {
           <Price price={pizza.price}/>
         </Card.Title>
         <hr/>
-        <IngredientsList ingredients={pizza.ingredients}/>
+        <Ingredients
+          type="list"
+          ingredients={pizza.ingredients}/>
       </Card.Body>
       <Card.Footer>
         <ButtonGroup className="w-100">

@@ -1,6 +1,6 @@
 import {Cover} from "../components/Cover.jsx";
 import {Col, Container, Row} from "react-bootstrap";
-import {PizzaCard} from "../components/PizzaCard.jsx";
+import {PizzaCard} from "../components/pizza/PizzaCard.jsx";
 import {useContext} from "react";
 import {GlobalContext} from "../context/global/GlobalContext.js";
 

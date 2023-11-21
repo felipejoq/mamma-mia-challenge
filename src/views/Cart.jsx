@@ -1,8 +1,8 @@
 import {Alert, Badge, Button, Card, Col, Container, Image, ListGroup, ListGroupItem, Row} from "react-bootstrap";
 import {useContext, useEffect} from "react";
 import {CartContext} from "../context/cart/CartContex.js";
-import {PrevButton} from "../components/PrevButton.jsx";
-import {ButtonAddPizzaToCart} from "../components/ButtonAddPizzaToCart.jsx";
+import {PrevButton} from "../components/buttons/PrevButton.jsx";
+import {ButtonAddPizzaToCart} from "../components/buttons/ButtonAddPizzaToCart.jsx";
 import {clpFormat} from "../helpers/currencyFormatters.js";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";

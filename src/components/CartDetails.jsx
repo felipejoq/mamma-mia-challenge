@@ -1,10 +1,11 @@
 import {Badge, Button, Card, Col, Image, ListGroup, Row} from "react-bootstrap";
 import {clpFormat} from "../helpers/currencyFormatters.js";
-import {ButtonAddPizzaToCart} from "./ButtonAddPizzaToCart.jsx";
+import {ButtonAddPizzaToCart} from "./buttons/ButtonAddPizzaToCart.jsx";
 import {useContext} from "react";
 import {CartContext} from "../context/cart/CartContex.js";
 import {toast} from "sonner";
 import {Link} from "react-router-dom";
+import {Ingredients} from "./ingredients/Ingredients.jsx";
 
 export const CartDetails = () => {
 
@@ -49,14 +50,9 @@ export const CartDetails = () => {
                             </small>
                           </p>
                         </div>
-                        <div className="item-ingredients d-flex gap-2 flex-wrap">
-                          <Badge bg="secondary">Ingredientes</Badge>
-                          {
-                            item.ingredients.map(ingredient => (
-                              <Badge key={ingredient} bg="success">{ingredient}</Badge>
-                            ))
-                          }
-                        </div>
+                        <Ingredients
+                          type="badges"
+                          ingredients={item.ingredients}/>
                       </div>
                     </Col>
                     <Col className="d-flex gap-2 align-items-center justify-content-end">

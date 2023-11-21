@@ -1,4 +1,4 @@
-import {clpFormat} from "../helpers/currencyFormatters.js";
+import {clpFormat} from "../../helpers/currencyFormatters.js";
 import {Badge} from "react-bootstrap";
 
 export const Price = ({price, size}) => {
