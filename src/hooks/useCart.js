@@ -1,5 +1,6 @@
 import {useEffect, useReducer} from "react";
 import {cartReducer} from "../reducers/cartReducer.js";
+import {ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART} from "../reducers/cartActions.js";
 
 const initialState = [];
 
@@ -17,7 +18,7 @@ export const useCart = () => {
 
   const addPizzaToCart = (pizza) => {
     const action = {
-      type: "[ITEM] add to cart",
+      type: ADD_ITEM_TO_CART,
       payload: pizza
     }
     dispatch(action);
@@ -25,7 +26,7 @@ export const useCart = () => {
 
   const removePizzaFromCart = (id) => {
     const action = {
-      type: "[ITEM] remove from cart",
+      type: REMOVE_ITEM_FROM_CART,
       payload: id
     }
     dispatch(action)
@@ -39,8 +40,8 @@ export const useCart = () => {
 
   return {
     cart,
+    totalCart: totalCart(),
     addPizzaToCart,
     removePizzaFromCart,
-    totalCart
   }
 };
