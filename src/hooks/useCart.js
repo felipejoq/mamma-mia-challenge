@@ -39,8 +39,8 @@ export const useCart = () => {
 
   return {
     cart,
+    totalCart: totalCart(),
     addPizzaToCart,
     removePizzaFromCart,
-    totalCart
   }
 };
