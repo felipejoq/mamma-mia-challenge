@@ -1,6 +1,8 @@
+import {ADD_ITEM_TO_CART, REMOVE_ITEM_FROM_CART} from "./cartActions.js";
+
 export const cartReducer = (initialState = [], action) => {
   switch (action.type) {
-    case '[ITEM] add to cart':
+    case ADD_ITEM_TO_CART:
       const pizzaExist = initialState.find(item => item.id === action.payload.id);
       if (pizzaExist) {
         return initialState.map(item => {
@@ -18,7 +20,7 @@ export const cartReducer = (initialState = [], action) => {
           action.payload
         ]
       }
-    case '[ITEM] remove from cart':
+    case REMOVE_ITEM_FROM_CART:
       return initialState.filter(item => item.id !== action.payload)
     default:
       return initialState;
